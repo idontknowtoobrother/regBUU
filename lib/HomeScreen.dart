@@ -137,6 +137,30 @@ class HomeScreen extends StatelessWidget {
                             )),
                       ],
                     )),
+                Container(
+                    decoration: BoxDecoration(
+                        color: AppColor.wrap, borderRadius: wrapBorder),
+                    child: Stack(
+                      children: [
+                        WhatNewsCard(),
+                        Positioned(
+                            left: 154,
+                            bottom: 10,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  '7 Oct - 9 Oct 2022',
+                                  style: TextStyle(fontSize: 14),
+                                ),
+                                Text(
+                                  'สนามตะกร้อ มหาวิทยาลัยบูรพา',
+                                  style: TextStyle(fontSize: 11),
+                                ),
+                              ],
+                            )),
+                      ],
+                    )),
               ],
             ),
           ),
