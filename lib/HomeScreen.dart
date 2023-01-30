@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
 import 'AppColor.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -39,11 +40,17 @@ class HomeScreen extends StatelessWidget {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Text('Jakkrit Chaopron',
-                              style: TextStyle(fontSize: 22)),
-                          Text('62160246@go.buu.ac.th',
-                              style: TextStyle(
-                                  fontSize: 14, color: AppColor.subText))
+                          const Text(
+                            'Jakkrit Chaopron',
+                            style: TextStyle(fontSize: 22),
+                          ),
+                          Text(
+                            '62160246@go.buu.ac.th',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: AppColor.subText,
+                            ),
+                          )
                         ],
                       )
                     ],
@@ -54,25 +61,28 @@ class HomeScreen extends StatelessWidget {
                   padding: wrapPadding,
                   decoration: BoxDecoration(
                       color: AppColor.wrap, borderRadius: wrapBorder),
-                  child: Row(children: [
-                    Image.asset(
-                      'assets/images/cap.png',
-                      width: 59,
-                    ),
-                    const SizedBox(
-                      width: 20,
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text('Faculty of Informatics | Computer Science'),
-                        Text(
-                          'Bachelor\'s degree',
-                          style: TextStyle(color: AppColor.subText),
-                        )
-                      ],
-                    )
-                  ]),
+                  child: Row(
+                    children: [
+                      Image.asset(
+                        'assets/images/cap.png',
+                        width: 59,
+                      ),
+                      const SizedBox(
+                        width: 20,
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                              'Faculty of Informatics | Computer Science'),
+                          Text(
+                            'Bachelor\'s degree',
+                            style: TextStyle(color: AppColor.subText),
+                          )
+                        ],
+                      )
+                    ],
+                  ),
                 ),
                 Row(
                   children: [
@@ -91,7 +101,9 @@ class HomeScreen extends StatelessWidget {
                   margin: EdgeInsets.only(top: 11),
                   padding: wrapPadding,
                   decoration: BoxDecoration(
-                      borderRadius: wrapBorder, color: AppColor.wrap),
+                    borderRadius: wrapBorder,
+                    color: AppColor.wrap,
+                  ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -100,10 +112,13 @@ class HomeScreen extends StatelessWidget {
                         style: TextStyle(fontSize: 22),
                       ),
                       StudySchedule(
-                          time: 'On going', subject: 'Mobile Programming'),
+                        time: 'On going',
+                        subject: 'Mobile Programming',
+                      ),
                       StudySchedule(
-                          time: '13:00-16:00',
-                          subject: 'Non Relational Database'),
+                        time: '13:00-16:00',
+                        subject: 'Non Relational Database',
+                      ),
                     ],
                   ),
                 ),
@@ -114,55 +129,93 @@ class HomeScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 14),
                 Container(
-                    decoration: BoxDecoration(
-                        color: AppColor.wrap, borderRadius: wrapBorder),
-                    child: Stack(
-                      children: [
-                        WhatNewsCard(),
-                        Positioned(
-                            left: 154,
-                            bottom: 10,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  '7 Oct - 9 Oct 2022',
-                                  style: TextStyle(fontSize: 14),
-                                ),
-                                Text(
-                                  'สนามตะกร้อ มหาวิทยาลัยบูรพา',
-                                  style: TextStyle(fontSize: 11),
-                                ),
-                              ],
-                            )),
-                      ],
-                    )),
+                  decoration: BoxDecoration(
+                      color: AppColor.wrap, borderRadius: wrapBorder),
+                  child: Stack(
+                    children: [
+                      WhatNewsCard(),
+                      Positioned(
+                        left: 154,
+                        bottom: 10,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              '7 Oct - 9 Oct 2022',
+                              style: TextStyle(fontSize: 14),
+                            ),
+                            Text(
+                              'สนามตะกร้อ มหาวิทยาลัยบูรพา',
+                              style: TextStyle(fontSize: 11),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 14),
                 Container(
-                    decoration: BoxDecoration(
-                        color: AppColor.wrap, borderRadius: wrapBorder),
-                    child: Stack(
-                      children: [
-                        WhatNewsCard(),
-                        Positioned(
-                            left: 154,
-                            bottom: 10,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  '7 Oct - 9 Oct 2022',
-                                  style: TextStyle(fontSize: 14),
-                                ),
-                                Text(
-                                  'สนามตะกร้อ มหาวิทยาลัยบูรพา',
-                                  style: TextStyle(fontSize: 11),
-                                ),
-                              ],
-                            )),
-                      ],
-                    )),
+                  decoration: BoxDecoration(
+                      color: AppColor.wrap, borderRadius: wrapBorder),
+                  child: Stack(
+                    children: [
+                      WhatNewsCard(),
+                      Positioned(
+                        left: 154,
+                        bottom: 10,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              '7 Oct - 9 Oct 2022',
+                              style: TextStyle(fontSize: 14),
+                            ),
+                            Text(
+                              'สนามตะกร้อ มหาวิทยาลัยบูรพา',
+                              style: TextStyle(fontSize: 11),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
+          ),
+        ),
+      ),
+      bottomNavigationBar: Container(
+        color: Color(0xFF0D1117),
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 10),
+          child: GNav(
+            gap: 8,
+            tabBorderRadius: 15,
+            backgroundColor: Color(0xFF0D1117),
+            activeColor: Color(0xFFC9D1D9),
+            tabBackgroundColor: Color(0xFF21262D),
+            color: Color(0xFFC9D1D9),
+            padding: EdgeInsets.all(9),
+            onTabChange: (index) {
+              print(index);
+            },
+            iconSize: 28,
+            tabs: [
+              GButton(
+                active: true,
+                icon: Icons.home,
+                text: "Home",
+              ),
+              GButton(
+                icon: Icons.person_pin,
+                text: "Student",
+              ),
+              GButton(
+                icon: Icons.logout_rounded,
+              )
+            ],
           ),
         ),
       ),
@@ -199,7 +252,7 @@ class HomeScreen extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 2.0),
       child: Row(
-        children: [Text(time), Text('- ' + subject)],
+        children: [Text(time), Text(' - ' + subject)],
       ),
     );
   }
