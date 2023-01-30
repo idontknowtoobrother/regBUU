@@ -137,7 +137,7 @@ class HomeScreen extends StatelessWidget {
                         bottom: 10,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
+                          children: const [
                             Text(
                               '7 Oct - 9 Oct 2022',
                               style: TextStyle(fontSize: 14),
@@ -164,7 +164,7 @@ class HomeScreen extends StatelessWidget {
                         bottom: 10,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
+                          children: const [
                             Text(
                               '7 Oct - 9 Oct 2022',
                               style: TextStyle(fontSize: 14),
@@ -217,7 +217,7 @@ class HomeScreen extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 2.0),
       child: Row(
-        children: [Text(time), Text(' - ' + subject)],
+        children: [Text(time), Text(' - $subject')],
       ),
     );
   }

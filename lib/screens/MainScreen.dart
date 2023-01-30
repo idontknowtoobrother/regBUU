@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
 import 'package:reg_buu_62160246/screens/HomeScreen.dart';
+import 'package:reg_buu_62160246/screens/LogoutScreen.dart';
 import 'package:reg_buu_62160246/screens/StudentScreen.dart';
 import '../styles/AppColor.dart';
-import '../styles/AppStyle.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -15,7 +15,11 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   int _screenIndex = 0;
-  List<Widget> _screen = [HomeScreen(), StudentScreen()];
+  final List<Widget> _screen = [
+    HomeScreen(),
+    StudentScreen(),
+    LogoutScreen(),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -24,24 +28,24 @@ class _MainScreenState extends State<MainScreen> {
       appBar: null,
       body: _screen[_screenIndex],
       bottomNavigationBar: Container(
-        color: Color(0xFF0D1117),
+        color: const Color(0xFF0D1117),
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 10),
           child: GNav(
             gap: 8,
             tabBorderRadius: 15,
-            backgroundColor: Color(0xFF0D1117),
-            activeColor: Color(0xFFC9D1D9),
-            tabBackgroundColor: Color(0xFF21262D),
-            color: Color(0xFFC9D1D9),
-            padding: EdgeInsets.all(9),
+            backgroundColor: const Color(0xFF0D1117),
+            activeColor: const Color(0xFFC9D1D9),
+            tabBackgroundColor: const Color(0xFF21262D),
+            color: const Color(0xFFC9D1D9),
+            padding: const EdgeInsets.all(9),
             onTabChange: (index) {
               setState(() {
                 _screenIndex = index;
               });
             },
             iconSize: 28,
-            tabs: [
+            tabs: const [
               GButton(
                 active: true,
                 icon: Icons.home,
