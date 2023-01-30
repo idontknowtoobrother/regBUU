@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:reg_buu_62160246/StudentScreen.dart';
-import 'AppColor.dart';
-import 'AppStyle.dart';
+import 'package:reg_buu_62160246/screens/StudentScreen.dart';
+import '../styles/AppColor.dart';
+import '../styles/AppStyle.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
-import 'AppColor.dart';
-
-import 'package:reg_buu_62160246/HomeScreen.dart';
-import 'package:reg_buu_62160246/StudentScreen.dart';
+import 'package:reg_buu_62160246/screens/HomeScreen.dart';
+import 'package:reg_buu_62160246/screens/StudentScreen.dart';
+import '../styles/AppColor.dart';
+import '../styles/AppStyle.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});

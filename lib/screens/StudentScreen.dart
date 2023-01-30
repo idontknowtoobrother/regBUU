@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:reg_buu_62160246/AppStyle.dart';
-import 'AppColor.dart';
+import '../styles/AppColor.dart';
+import '../styles/AppStyle.dart';
 
 class StudentScreen extends StatelessWidget {
   const StudentScreen({super.key});

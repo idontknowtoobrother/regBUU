@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:reg_buu_62160246/MainScreen.dart';
-
-import 'AppColor.dart';
+import 'package:reg_buu_62160246/screens/MainScreen.dart';
+import './styles/AppColor.dart';
 
 void main() {
   runApp(const MyApp());
