@@ -30,7 +30,8 @@ class HomeScreen extends StatelessWidget {
                       const CircleAvatar(
                         radius: 60,
                         backgroundImage: NetworkImage(
-                            'https://media.discordapp.net/attachments/1023825760143802448/1069252980500611123/image.png'),
+                          'https://media.discordapp.net/attachments/1044634625391218758/1069544459789938718/image.png',
+                        ),
                       ),
                       const SizedBox(
                         width: 26,
@@ -112,10 +113,16 @@ class HomeScreen extends StatelessWidget {
                       StudySchedule(
                         time: 'On going',
                         subject: 'Mobile Programming',
+                        textStyle: TextStyle(
+                          color: AppColor.success,
+                        ),
                       ),
                       StudySchedule(
                         time: '13:00-16:00',
                         subject: 'Non Relational Database',
+                        textStyle: TextStyle(
+                          color: AppColor.warning,
+                        ),
                       ),
                     ],
                   ),
@@ -213,11 +220,21 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  Padding StudySchedule({required String time, required String subject}) {
+  Padding StudySchedule({
+    required String time,
+    required String subject,
+    required TextStyle textStyle,
+  }) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 2.0),
       child: Row(
-        children: [Text(time), Text(' - $subject')],
+        children: [
+          Text(
+            time,
+            style: textStyle,
+          ),
+          Text(' - $subject')
+        ],
       ),
     );
   }

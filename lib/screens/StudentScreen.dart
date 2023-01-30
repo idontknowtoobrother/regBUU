@@ -28,7 +28,8 @@ class StudentScreen extends StatelessWidget {
                       const CircleAvatar(
                         radius: 60,
                         backgroundImage: NetworkImage(
-                            'https://media.discordapp.net/attachments/1023825760143802448/1069252980500611123/image.png'),
+                          'https://media.discordapp.net/attachments/1044634625391218758/1069544459789938718/image.png',
+                        ),
                       ),
                       const SizedBox(
                         width: 26,
