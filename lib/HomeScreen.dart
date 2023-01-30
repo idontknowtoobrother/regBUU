@@ -9,12 +9,9 @@ class HomeScreen extends StatelessWidget {
   static const wrapOthersMargin = EdgeInsets.only(left: 15, top: 11, right: 15);
   static const wrapBorder = BorderRadius.all(Radius.circular(15));
   static const wrapPadding = EdgeInsets.all(11);
-  static const String defaultScreen = "HomeScreen";
 
   @override
   Widget build(BuildContext context) {
-    var nowScreen = defaultScreen;
-
     return Scaffold(
       backgroundColor: AppColor.body,
       appBar: null,
