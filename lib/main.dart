@@ -1,14 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:reg_buu_62160246/HomeScreen.dart';
+import 'package:reg_buu_62160246/MainScreen.dart';
+
 import 'AppColor.dart';
 
 void main() {
-  var app = MaterialApp(
-      theme: ThemeData(
-          fontFamily: 'CSChatThaiUI',
-          textTheme:
-              TextTheme(bodyText2: TextStyle(color: AppColor.normalText))),
-      home: const HomeScreen());
+  runApp(const MyApp());
+}
 
-  runApp(app);
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData(
+        fontFamily: 'CSChatThaiUI',
+        textTheme: TextTheme(
+          bodyText2: TextStyle(color: AppColor.normalText),
+        ),
+      ),
+      debugShowCheckedModeBanner: false,
+      home: MainScreen(),
+    );
+  }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:reg_buu_62160246/StudentScreen.dart';
 import 'AppColor.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -8,9 +9,12 @@ class HomeScreen extends StatelessWidget {
   static const wrapOthersMargin = EdgeInsets.only(left: 15, top: 11, right: 15);
   static const wrapBorder = BorderRadius.all(Radius.circular(15));
   static const wrapPadding = EdgeInsets.all(11);
+  static const String defaultScreen = "HomeScreen";
 
   @override
   Widget build(BuildContext context) {
+    var nowScreen = defaultScreen;
+
     return Scaffold(
       backgroundColor: AppColor.body,
       appBar: null,
@@ -183,39 +187,6 @@ class HomeScreen extends StatelessWidget {
                 ),
               ],
             ),
-          ),
-        ),
-      ),
-      bottomNavigationBar: Container(
-        color: Color(0xFF0D1117),
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 10),
-          child: GNav(
-            gap: 8,
-            tabBorderRadius: 15,
-            backgroundColor: Color(0xFF0D1117),
-            activeColor: Color(0xFFC9D1D9),
-            tabBackgroundColor: Color(0xFF21262D),
-            color: Color(0xFFC9D1D9),
-            padding: EdgeInsets.all(9),
-            onTabChange: (index) {
-              print(index);
-            },
-            iconSize: 28,
-            tabs: [
-              GButton(
-                active: true,
-                icon: Icons.home,
-                text: "Home",
-              ),
-              GButton(
-                icon: Icons.person_pin,
-                text: "Student",
-              ),
-              GButton(
-                icon: Icons.logout_rounded,
-              )
-            ],
           ),
         ),
       ),
