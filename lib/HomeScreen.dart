@@ -2,13 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:reg_buu_62160246/StudentScreen.dart';
 import 'AppColor.dart';
+import 'AppStyle.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
-  static const wrapMargin = EdgeInsets.only(left: 15, top: 20, right: 15);
-  static const wrapOthersMargin = EdgeInsets.only(left: 15, top: 11, right: 15);
-  static const wrapBorder = BorderRadius.all(Radius.circular(15));
-  static const wrapPadding = EdgeInsets.all(11);
 
   @override
   Widget build(BuildContext context) {
@@ -23,9 +20,9 @@ class HomeScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  padding: wrapPadding,
+                  padding: AppStyle.wrapPadding,
                   decoration: BoxDecoration(
-                      color: AppColor.wrap, borderRadius: wrapBorder),
+                      color: AppColor.wrap, borderRadius: AppStyle.wrapBorder),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -59,9 +56,9 @@ class HomeScreen extends StatelessWidget {
                 ),
                 Container(
                   margin: EdgeInsets.only(top: 11),
-                  padding: wrapPadding,
+                  padding: AppStyle.wrapPadding,
                   decoration: BoxDecoration(
-                      color: AppColor.wrap, borderRadius: wrapBorder),
+                      color: AppColor.wrap, borderRadius: AppStyle.wrapBorder),
                   child: Row(
                     children: [
                       Image.asset(
@@ -100,9 +97,9 @@ class HomeScreen extends StatelessWidget {
                 ),
                 Container(
                   margin: EdgeInsets.only(top: 11),
-                  padding: wrapPadding,
+                  padding: AppStyle.wrapPadding,
                   decoration: BoxDecoration(
-                    borderRadius: wrapBorder,
+                    borderRadius: AppStyle.wrapBorder,
                     color: AppColor.wrap,
                   ),
                   child: Column(
@@ -131,7 +128,7 @@ class HomeScreen extends StatelessWidget {
                 SizedBox(height: 14),
                 Container(
                   decoration: BoxDecoration(
-                      color: AppColor.wrap, borderRadius: wrapBorder),
+                      color: AppColor.wrap, borderRadius: AppStyle.wrapBorder),
                   child: Stack(
                     children: [
                       WhatNewsCard(),
@@ -158,7 +155,7 @@ class HomeScreen extends StatelessWidget {
                 SizedBox(height: 14),
                 Container(
                   decoration: BoxDecoration(
-                      color: AppColor.wrap, borderRadius: wrapBorder),
+                      color: AppColor.wrap, borderRadius: AppStyle.wrapBorder),
                   child: Stack(
                     children: [
                       WhatNewsCard(),
@@ -229,8 +226,8 @@ class HomeScreen extends StatelessWidget {
     return Expanded(
       child: Container(
         margin: EdgeInsets.only(top: 11),
-        decoration:
-            BoxDecoration(color: AppColor.wrap, borderRadius: wrapBorder),
+        decoration: BoxDecoration(
+            color: AppColor.wrap, borderRadius: AppStyle.wrapBorder),
         padding: EdgeInsets.only(right: 11, left: 11, top: 26, bottom: 26),
         child: Column(
           children: [
