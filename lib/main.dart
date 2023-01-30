@@ -8,7 +8,7 @@ void main() {
           fontFamily: 'CSChatThaiUI',
           textTheme:
               TextTheme(bodyText2: TextStyle(color: AppColor.normalText))),
-      home: HomeScreen());
+      home: const HomeScreen());
 
   runApp(app);
 }
