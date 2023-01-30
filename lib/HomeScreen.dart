@@ -55,7 +55,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.only(top: 11),
+                  margin: const EdgeInsets.only(top: 11),
                   padding: AppStyle.wrapPadding,
                   decoration: BoxDecoration(
                       color: AppColor.wrap, borderRadius: AppStyle.wrapBorder),
@@ -85,18 +85,18 @@ class HomeScreen extends StatelessWidget {
                 Row(
                   children: [
                     CareerCard(title: 'GPA', value: '2.78'),
-                    SizedBox(
+                    const SizedBox(
                       width: 15,
                     ),
                     CareerCard(title: 'C.REG', value: '110'),
-                    SizedBox(
+                    const SizedBox(
                       width: 15,
                     ),
                     CareerCard(title: 'C.EARN', value: '104'),
                   ],
                 ),
                 Container(
-                  margin: EdgeInsets.only(top: 11),
+                  margin: const EdgeInsets.only(top: 11),
                   padding: AppStyle.wrapPadding,
                   decoration: BoxDecoration(
                     borderRadius: AppStyle.wrapBorder,
@@ -105,7 +105,7 @@ class HomeScreen extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
+                      const Text(
                         'Schedule ( Today )',
                         style: TextStyle(fontSize: 22),
                       ),
@@ -120,12 +120,12 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 14),
-                Text(
+                const SizedBox(height: 14),
+                const Text(
                   'What\'s New',
                   style: TextStyle(fontSize: 22),
                 ),
-                SizedBox(height: 14),
+                const SizedBox(height: 14),
                 Container(
                   decoration: BoxDecoration(
                       color: AppColor.wrap, borderRadius: AppStyle.wrapBorder),
@@ -152,7 +152,7 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 14),
+                const SizedBox(height: 14),
                 Container(
                   decoration: BoxDecoration(
                       color: AppColor.wrap, borderRadius: AppStyle.wrapBorder),
@@ -191,16 +191,16 @@ class HomeScreen extends StatelessWidget {
     return Row(
       children: [
         ClipRRect(
-          borderRadius: BorderRadius.all(Radius.circular(15)),
+          borderRadius: const BorderRadius.all(Radius.circular(15)),
           child: Image.network(
             'https://media.discordapp.net/attachments/1056647554294624356/1069241549990412409/wn1.jpg',
             width: 141,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           width: 14,
         ),
-        Flexible(
+        const Flexible(
           child: Text(
             'WWJ เจ้าของเพลงดัง "จีบอยู่เผื่อไม่รู้" แต่ถ้าอยากให้เค้ารู้ก็แท็กชวนเค้ามางาน Long do music festival ด้วยกันสิ!',
             maxLines: 3,
@@ -225,10 +225,11 @@ class HomeScreen extends StatelessWidget {
   Expanded CareerCard({required String title, required String value}) {
     return Expanded(
       child: Container(
-        margin: EdgeInsets.only(top: 11),
+        margin: const EdgeInsets.only(top: 11),
         decoration: BoxDecoration(
             color: AppColor.wrap, borderRadius: AppStyle.wrapBorder),
-        padding: EdgeInsets.only(right: 11, left: 11, top: 26, bottom: 26),
+        padding:
+            const EdgeInsets.only(right: 11, left: 11, top: 26, bottom: 26),
         child: Column(
           children: [
             Text(

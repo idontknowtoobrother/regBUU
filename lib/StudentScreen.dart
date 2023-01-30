@@ -53,7 +53,7 @@ class StudentScreen extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.only(top: 11),
+                  margin: const EdgeInsets.only(top: 11),
                   padding: AppStyle.wrapPadding,
                   decoration: BoxDecoration(
                       color: AppColor.wrap, borderRadius: AppStyle.wrapBorder),
@@ -83,18 +83,117 @@ class StudentScreen extends StatelessWidget {
                 Row(
                   children: [
                     CareerCard(title: 'GPA', value: '2.78'),
-                    SizedBox(
+                    const SizedBox(
                       width: 15,
                     ),
                     CareerCard(title: 'C.REG', value: '110'),
-                    SizedBox(
+                    const SizedBox(
                       width: 15,
                     ),
                     CareerCard(title: 'C.EARN', value: '104'),
                   ],
                 ),
                 Row(
-                  children: [],
+                  children: [
+                    Container(
+                      margin: const EdgeInsets.only(
+                        top: 11,
+                      ),
+                      decoration: BoxDecoration(
+                        color: AppColor.wrap,
+                        borderRadius: AppStyle.wrapBorder,
+                      ),
+                      padding: const EdgeInsets.only(
+                        right: 42,
+                        left: 42,
+                        top: 20,
+                        bottom: 18,
+                      ),
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            'assets/images/red-blood-cells.png',
+                            width: 33,
+                          ),
+                          const SizedBox(
+                            height: 8,
+                          ),
+                          Text(
+                            'AB',
+                            style: TextStyle(
+                                color: AppColor.normalText, fontSize: 24),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 15,
+                    ),
+                    Expanded(
+                      child: Container(
+                        margin: const EdgeInsets.only(
+                          top: 11,
+                        ),
+                        decoration: BoxDecoration(
+                          color: AppColor.wrap,
+                          borderRadius: AppStyle.wrapBorder,
+                        ),
+                        padding: const EdgeInsets.only(
+                          top: 11,
+                          left: 26,
+                          bottom: 14,
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Row(
+                              children: [
+                                Image.asset(
+                                  'assets/images/identify.png',
+                                  width: 43,
+                                ),
+                                const SizedBox(
+                                  width: 7,
+                                ),
+                                const Flexible(
+                                  child: Text(
+                                    '14399003000999',
+                                    maxLines: 1,
+                                    softWrap: false,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: TextStyle(fontSize: 18),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                )
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Image.asset(
+                                  'assets/images/student-card.png',
+                                  width: 40,
+                                ),
+                                const SizedBox(
+                                  width: 10,
+                                ),
+                                const Flexible(
+                                  child: Text(
+                                    '62160246',
+                                    softWrap: false,
+                                    overflow: TextOverflow.ellipsis,
+                                    maxLines: 1,
+                                    style: TextStyle(fontSize: 18),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                )
+                              ],
+                            )
+                          ],
+                        ),
+                      ),
+                    )
+                  ],
                 )
               ],
             ),
@@ -107,10 +206,11 @@ class StudentScreen extends StatelessWidget {
   Expanded CareerCard({required String title, required String value}) {
     return Expanded(
       child: Container(
-        margin: EdgeInsets.only(top: 11),
+        margin: const EdgeInsets.only(top: 11),
         decoration: BoxDecoration(
             color: AppColor.wrap, borderRadius: AppStyle.wrapBorder),
-        padding: EdgeInsets.only(right: 11, left: 11, top: 26, bottom: 26),
+        padding:
+            const EdgeInsets.only(right: 11, left: 11, top: 26, bottom: 26),
         child: Column(
           children: [
             Text(
