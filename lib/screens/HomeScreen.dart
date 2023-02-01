@@ -200,7 +200,7 @@ class HomeScreen extends StatelessWidget {
         ClipRRect(
           borderRadius: const BorderRadius.all(Radius.circular(15)),
           child: Image.network(
-            'https://media.discordapp.net/attachments/1056647554294624356/1069241549990412409/wn1.jpg',
+            'https://media.discordapp.net/attachments/911744953036709940/1070270453811249275/307551781_555728729688126_4807029460221045767_n.png',
             width: 141,
           ),
         ),
